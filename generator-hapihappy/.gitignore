@@ -1,1 +1,7 @@
 node_modules/
+.editorconfig
+.gitattributes
+.jshintrc
+.travis.yml
+.yo-rc.json
+.DS_Store

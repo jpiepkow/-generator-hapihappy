@@ -5,8 +5,8 @@ module.exports = [{
     method: 'GET',
     path: '/v1',
     config: {
-    opts = {};
         handler: function(request, reply) {
+        opts = {};
             <%= handle %>.example(opts, function(err,r) {
                 if(err) {
                     reply(err);

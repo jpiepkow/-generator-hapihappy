@@ -1,0 +1,6 @@
+{
+  "database": {
+    "url": "<%= url %>",
+    "collection": "<%= col %>"
+  }
+}

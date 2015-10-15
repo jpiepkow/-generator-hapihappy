@@ -3,7 +3,7 @@ var Hapi = require('hapi'),
     Vision          = require('vision'),
     HapiSwagger     = require('hapi-swagger'),
     Pack            = require('./package');
-var config = require('./config/settings');
+var config = require('./config/server_settings');
 var routes = require('./config/routes');
 
 GLOBAL.server = new Hapi.Server();

@@ -1,6 +1,6 @@
 var <%= handle %> = {
     example: function(opts,callback) {
-        callback(null,'Api is healthy and working');
+        callback(null,{working:true});
     }
 };
 module.exports = <%= handle %>;

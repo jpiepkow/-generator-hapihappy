@@ -17,6 +17,15 @@ bootstrap = {
         MongoClient.connect(dbConfig.url, function(err, db) {
             if(err) { throw err;}
             db.listCollections().toArray(function(err, items) {
+                if(items.length === 0) {
+                    db.createCollection(dbConfig.collection, function(err, collection){
+                        if(err) {
+                            return callback('Error bootstrapping application', null);
+                        } else {
+                            return callback(null, 'bootstrapped');
+                        }
+                    });
+                }
                 checkCollection(items,dbConfig.collection,function(err, r) {
                     if(err) {
                         callback('Error bootstrapping application:', err);

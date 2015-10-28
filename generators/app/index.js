@@ -42,7 +42,7 @@ module.exports = yeoman.generators.Base.extend({
           type    : 'confirm',
           name    : 'mongo',
           message : 'Include mongo bootstrap files?',
-          default : true
+          default : false
       }, {
               when: function (response) {
                   return response.mongo;
@@ -153,6 +153,14 @@ module.exports = yeoman.generators.Base.extend({
     this.fs.copy(
         this.templatePath('_gulpfile.js'),
         this.destinationPath('gulpfile.js')
+    );
+    this.fs.copy(
+        this.templatePath('_.jshintignore'),
+        this.destinationPath('.jshintignore')
+    );
+    this.fs.copy(
+        this.templatePath('_.jshintrc'),
+        this.destinationPath('.jshintrc')
     );
     this.fs.copy(
         this.templatePath('_.gitignore'),

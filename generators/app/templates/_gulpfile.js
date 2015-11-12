@@ -39,14 +39,14 @@ gulp.task('tests', function (cb) {
         });
 });
 gulp.task('lint', function() {
-    return gulp.src(['lib/handlers/*.js', 'lib/*.js', 'lib/outputs/*.js'])
+    return gulp.src(['lib/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
 
 
 gulp.task('jslint', function (cb) {
-    gulp.src(['lib/handlers/*.js', 'lib/*.js', 'lib/outputs/*.js'])
+    gulp.src(['lib/*.js'])
 
         .pipe(jslint({
             // these directives can
